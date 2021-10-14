@@ -41,30 +41,3 @@ st.altair_chart(bar_chart)
 
 st.markdown("### Financials :moneybag:")
 AgGrid(df)
-
-
-
-
-# source = pd.DataFrame(np.cumsum(np.random.randn(100, 3), 0).round(2),
-#                     columns=['alcohol', 'beer', 'coke'], index=pd.RangeIndex(100, name='x'))
-# source = source.reset_index().melt('x', var_name='category', value_name='y')
-#
-# line_chart = alt.Chart(df2).mark_line(interpolate='basis').encode(
-#     alt.X('x', title='Month'),
-#     alt.Y('y', title='Cumulative Profit'),
-#     color='category:N'
-# ).properties(
-#     title='Cumulative Profit by Month'
-# )
-#
-# st.altair_chart(line_chart)
-
-# source = pd.DataFrame({
-#     'a': ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'],
-#     'b': [28, 55, 43, 91, 81, 53, 19, 87, 52]
-# })
-#
-# alt.Chart(source).mark_bar().encode(
-#     x='a',
-#     y='b'
-# )
