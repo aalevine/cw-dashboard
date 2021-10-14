@@ -17,26 +17,26 @@ st.markdown("# caseWhen Consulting :man-surfing:")
 st.markdown("")
 st.markdown("### Up and to the Right :chart_with_upwards_trend:")
 
-df3 = pd.DataFrame({
-  'Month': df['Month'].values,
-  'Cumulative Profit': [int(x.replace(',', '')) for x in df['Cumulative Profit'].values]
-})
-
-bar_chart = alt.Chart(df3).mark_bar().encode(
-    alt.X('Month', title=''),
-    alt.Y('Cumulative Profit', title='Cumulative Profit')
-)
-
-st.altair_chart(bar_chart)
-
-# # Example with Streamlit wrapper
-# df2 = pd.DataFrame({
+# df3 = pd.DataFrame({
 #   'Month': df['Month'].values,
 #   'Cumulative Profit': [int(x.replace(',', '')) for x in df['Cumulative Profit'].values]
 # })
-# df2 = df2.set_index('Month')
 #
-# st.bar_chart(data=df2)
+# bar_chart = alt.Chart(df3).mark_bar().encode(
+#     alt.X('Month', title=''),
+#     alt.Y('Cumulative Profit', title='Cumulative Profit')
+# )
+#
+# st.altair_chart(bar_chart)
+
+# Example with Streamlit wrapper
+df2 = pd.DataFrame({
+  'Month': df['Month'].values,
+  'Cumulative Profit': [int(x.replace(',', '')) for x in df['Cumulative Profit'].values]
+})
+df2 = df2.set_index('Month')
+
+st.bar_chart(data=df2)
 # AgGrid(df2)
 
 st.markdown("### Financials :moneybag:")
